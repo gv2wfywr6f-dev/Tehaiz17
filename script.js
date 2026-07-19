@@ -40,7 +40,20 @@ clearInterval(timer);
 document.getElementById("timer").innerHTML =
 "Alhamdulillah, The Day Has Arrived ❤️";
 
+const openBtn = document.getElementById("openBtn");
+const opening = document.getElementById("opening");
+const music = document.getElementById("bgMusic");
+
+openBtn.onclick = function(){
+
+opening.classList.add("hide");
+
+if(music){
+music.play();
 }
+
+};
 
 
 },1000);
+
