@@ -1,5 +1,3 @@
 <audio id="bgMusic" loop>
   <source src="audio/nasheed.mp3" type="audio/mpeg">
 </audio>
-
-<button id="musicBtn">🎵</button>
