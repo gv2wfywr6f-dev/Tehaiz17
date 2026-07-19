@@ -1,6 +1,6 @@
-/* ==========================
+/* =========================
 RESET
-========================== */
+========================= */
 
 *{
 margin:0;
@@ -13,223 +13,139 @@ scroll-behavior:smooth;
 }
 
 body{
-
 font-family:'Poppins',sans-serif;
-
-background:#f7efe5;
-
-color:#5d1f28;
-
+background:#f6efe8;
+color:#4a2d2d;
 overflow-x:hidden;
-
 }
 
-
-/* ==========================
+/* =========================
 COVER PAGE
-========================== */
+========================= */
 
 #cover{
-
-position:relative;
-
 height:100vh;
-
+position:relative;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
 padding:30px;
 
 background:
-
-linear-gradient(rgba(247,239,229,.75),
-rgba(247,239,229,.85)),
-
-url("images/roses-bg.png");
+linear-gradient(rgba(246,239,232,.75),
+rgba(246,239,232,.88)),
+url("images/roses-bg.jpg");
 
 background-size:cover;
-
 background-position:center;
-
+background-repeat:no-repeat;
 }
 
-
-.overlay{
-
+.cover-overlay{
 position:absolute;
-
 inset:0;
-
+background:rgba(255,255,255,.08);
 backdrop-filter:blur(3px);
-
 }
-
 
 .cover-content{
-
 position:relative;
-
 z-index:2;
-
-animation:fadeUp 2s ease;
-
+max-width:500px;
+animation:fadeUp 1.8s ease;
 }
-
 
 .arabic{
-
 font-family:'Noto Naskh Arabic',serif;
-
 font-size:24px;
-
-color:#8d5a35;
-
+color:#8b1e2d;
 margin-bottom:25px;
-
 }
-
 
 .initials{
-
 font-family:'Cinzel',serif;
-
-font-size:95px;
-
-letter-spacing:6px;
-
+font-size:90px;
+letter-spacing:8px;
 color:#8b1e2d;
-
-text-shadow:
-
-0 4px 15px rgba(0,0,0,.18);
-
+text-shadow:0 10px 25px rgba(0,0,0,.15);
 }
-
 
 .initials span{
-
-color:#c59a5d;
-
+color:#c9a55d;
 }
-
 
 .names{
-
 font-family:'Cinzel',serif;
-
-font-size:42px;
-
-margin:18px 0;
-
-color:#5a1f25;
-
+font-size:40px;
+margin:20px 0;
+color:#5f1b26;
 }
 
+.names span{
+color:#b68d3d;
+}
 
-.subtitle{
-
+.invite-text{
 font-size:18px;
-
-max-width:420px;
-
-margin:auto;
-
-line-height:1.7;
-
-color:#6d4a41;
-
+line-height:1.8;
+color:#6a4b45;
+margin-top:15px;
 }
-
 
 #openInvitation{
-
 margin-top:40px;
-
-padding:16px 45px;
-
+padding:15px 42px;
 border:none;
-
 border-radius:50px;
-
 background:#8b1e2d;
-
-color:white;
-
+color:#fff;
 font-size:17px;
-
 cursor:pointer;
-
-transition:.4s;
-
-box-shadow:
-
-0 12px 30px rgba(90,20,25,.35);
-
+transition:.35s;
+box-shadow:0 15px 30px rgba(139,30,45,.3);
 }
-
 
 #openInvitation:hover{
-
 transform:translateY(-5px);
-
-background:#a62335;
-
+background:#a3263b;
 }
-
-
-/* Animation */
 
 @keyframes fadeUp{
 
 from{
-
 opacity:0;
-
-transform:translateY(50px);
-
+transform:translateY(40px);
 }
 
 to{
-
 opacity:1;
-
 transform:translateY(0);
-
 }
 
 }
-/* ==========================
-ENVELOPE
-========================== */
+/* =========================
+ENVELOPE SECTION
+========================= */
 
 #envelopeSection{
-
 min-height:100vh;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
+padding:60px 20px;
 
 background:
-
-linear-gradient(rgba(250,242,235,.90),
-rgba(250,242,235,.95)),
-
-url("images/roses-bg.png");
+linear-gradient(rgba(248,241,235,.85),
+rgba(248,241,235,.92)),
+url("images/roses-bg.jpg");
 
 background-size:cover;
-
-padding:50px;
-
+background-position:center;
 }
 
+
+/* Envelope */
 
 .envelope{
 
@@ -239,14 +155,14 @@ width:340px;
 
 height:230px;
 
-cursor:pointer;
-
-perspective:1200px;
+margin:auto;
 
 animation:floatEnvelope 4s ease-in-out infinite;
 
 }
 
+
+/* Bottom */
 
 .envelope-back{
 
@@ -260,12 +176,15 @@ height:180px;
 
 background:#8b1e2d;
 
-border-radius:0 0 12px 12px;
+border-radius:0 0 14px 14px;
 
-box-shadow:0 20px 40px rgba(0,0,0,.2);
+box-shadow:
+0 20px 45px rgba(0,0,0,.25);
 
 }
 
+
+/* Flap */
 
 .flap{
 
@@ -283,16 +202,18 @@ border-left:170px solid transparent;
 
 border-right:170px solid transparent;
 
-border-top:120px solid #a92c3e;
+border-top:120px solid #b02539;
 
 transform-origin:top;
 
-transition:1s;
+transition:1s ease;
 
 z-index:5;
 
 }
 
+
+/* Letter */
 
 .letter{
 
@@ -304,11 +225,11 @@ top:40px;
 
 width:300px;
 
-height:170px;
+height:165px;
 
 background:#fffdf9;
 
-border-radius:12px;
+border-radius:15px;
 
 display:flex;
 
@@ -318,9 +239,10 @@ justify-content:center;
 
 align-items:center;
 
-box-shadow:0 15px 35px rgba(0,0,0,.15);
+box-shadow:
+0 15px 35px rgba(0,0,0,.15);
 
-transition:1s;
+transition:1s ease;
 
 z-index:2;
 
@@ -340,22 +262,24 @@ margin-bottom:10px;
 
 .letter p{
 
-color:#7b5a52;
+color:#7b5b52;
 
 margin-bottom:20px;
 
 }
 
 
+/* Rose Seal */
+
 #seal{
 
-width:70px;
+width:72px;
 
-height:70px;
+height:72px;
 
 border-radius:50%;
 
-background:#b71c31;
+background:#b51d32;
 
 display:flex;
 
@@ -365,11 +289,12 @@ align-items:center;
 
 font-size:30px;
 
-color:white;
+cursor:pointer;
 
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+box-shadow:
+0 10px 20px rgba(0,0,0,.25);
 
-transition:.4s;
+transition:.35s;
 
 }
 
@@ -380,6 +305,8 @@ transform:scale(1.1);
 
 }
 
+
+/* Animation when JS adds .open */
 
 .envelope.open .flap{
 
@@ -395,11 +322,13 @@ transform:translateY(-120px);
 }
 
 
+/* Floating */
+
 @keyframes floatEnvelope{
 
 0%,100%{
 
-transform:translateY(0px);
+transform:translateY(0);
 
 }
 
@@ -410,61 +339,227 @@ transform:translateY(-12px);
 }
 
 }
-/* ==========================
-MAIN INVITATION
-========================== */
+/* =========================
+SCRATCH SECTION
+========================= */
 
-#invitation{
+#scratchSection{
 
-padding:80px 25px;
+padding:90px 20px;
 
 background:
-linear-gradient(rgba(247,239,229,.96),
-rgba(247,239,229,.96)),
-url("images/roses-bg.png");
+linear-gradient(rgba(247,239,232,.96),
+rgba(247,239,232,.96)),
+url("images/roses-bg.jpg");
 
 background-size:cover;
-
-background-attachment:fixed;
 
 text-align:center;
 
 }
 
 
-.couple{
+.section-title h2{
 
-width:320px;
+font-family:'Cinzel',serif;
 
-max-width:90%;
+font-size:42px;
 
-display:block;
+color:#8b1e2d;
 
-margin:30px auto;
-
-animation:coupleFloat 5s ease-in-out infinite;
-
-filter:drop-shadow(0 15px 25px rgba(0,0,0,.2));
+margin-bottom:12px;
 
 }
 
 
-@keyframes coupleFloat{
+.section-title p{
 
-0%,100%{
+color:#7b5b52;
 
-transform:translateY(0);
+margin-bottom:45px;
 
-}
-
-50%{
-
-transform:translateY(-15px);
+font-size:18px;
 
 }
 
+
+/* Scratch Card */
+
+.scratch-card{
+
+position:relative;
+
+width:340px;
+
+height:210px;
+
+margin:auto;
+
+border-radius:22px;
+
+overflow:hidden;
+
+background:#fff;
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.18);
+
+border:3px solid #d4b07a;
+
 }
 
+
+/* Hidden Date */
+
+.date-card{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+linear-gradient(135deg,#fffdf8,#f6efe8);
+
+}
+
+
+.date-card h3{
+
+font-family:'Cinzel',serif;
+
+color:#8b1e2d;
+
+font-size:26px;
+
+}
+
+
+.date-card h1{
+
+font-size:70px;
+
+color:#b02539;
+
+margin:10px 0;
+
+font-family:'Cinzel',serif;
+
+}
+
+
+.date-card h2{
+
+font-size:28px;
+
+color:#7b2332;
+
+font-family:'Cinzel',serif;
+
+margin-bottom:10px;
+
+}
+
+
+.date-card p{
+
+font-size:17px;
+
+color:#6b5a53;
+
+}
+
+
+/* Canvas */
+
+#scratchCanvas{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+cursor:pointer;
+
+border-radius:22px;
+
+}
+
+
+/* Sparkle Effect */
+
+.scratch-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+
+left:-50%;
+
+width:200%;
+
+height:200%;
+
+background:
+linear-gradient(
+45deg,
+transparent,
+rgba(255,255,255,.45),
+transparent
+);
+
+animation:shine 4s linear infinite;
+
+pointer-events:none;
+
+}
+
+
+@keyframes shine{
+
+0%{
+
+transform:translateX(-100%) rotate(20deg);
+
+}
+
+100%{
+
+transform:translateX(100%) rotate(20deg);
+
+}
+
+}
+/* =========================
+INVITATION
+========================= */
+
+#invitation{
+
+padding:90px 20px;
+
+background:
+linear-gradient(rgba(248,242,236,.95),
+rgba(248,242,236,.95)),
+url("images/roses-bg.jpg");
+
+background-size:cover;
+
+text-align:center;
+
+}
 
 
 #invitation h1{
@@ -480,43 +575,82 @@ margin:20px 0;
 }
 
 
+#invitation h1 span{
+
+color:#c6a15b;
+
+}
+
+
+.couple{
+
+display:block;
+
+width:320px;
+
+max-width:90%;
+
+margin:35px auto;
+
+filter:drop-shadow(0 20px 30px rgba(0,0,0,.18));
+
+animation:floatCouple 5s ease-in-out infinite;
+
+}
+
+
+@keyframes floatCouple{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-14px);
+
+}
+
+}
+
+
 .welcome{
 
 max-width:650px;
 
-margin:20px auto 50px;
-
-line-height:1.9;
+margin:25px auto 45px;
 
 font-size:18px;
 
-color:#6a4a43;
+line-height:1.9;
+
+color:#6d4b45;
 
 }
 
 
 
-/* INFO CARDS */
+/* Cards */
 
 .info-card{
 
-background:rgba(255,255,255,.92);
-
-backdrop-filter:blur(8px);
-
-padding:28px;
+max-width:420px;
 
 margin:25px auto;
 
-max-width:420px;
+padding:30px;
+
+background:rgba(255,255,255,.92);
+
+border:2px solid #d6b07b;
 
 border-radius:22px;
 
-border:1px solid #d8b483;
-
 box-shadow:0 15px 35px rgba(0,0,0,.08);
 
-transition:.4s;
+transition:.35s;
 
 }
 
@@ -539,12 +673,34 @@ margin-bottom:15px;
 }
 
 
+.info-card p{
 
-/* COUNTDOWN */
+line-height:1.8;
+
+font-size:17px;
+
+}
+
+
+
+/* Countdown */
 
 .countdown{
 
-margin-top:70px;
+margin-top:80px;
+
+}
+
+
+.countdown h2{
+
+font-family:'Cinzel',serif;
+
+font-size:36px;
+
+color:#8b1e2d;
+
+margin-bottom:30px;
 
 }
 
@@ -559,33 +715,31 @@ gap:18px;
 
 flex-wrap:wrap;
 
-margin-top:25px;
-
 }
 
 
-#timer div{
+.time-box{
 
 width:95px;
 
 padding:18px;
 
-border-radius:18px;
-
 background:#8b1e2d;
 
-color:#fff;
+color:white;
+
+border-radius:18px;
 
 box-shadow:0 12px 25px rgba(0,0,0,.15);
 
 }
 
 
-#timer span{
+.time-box span{
 
 display:block;
 
-font-size:32px;
+font-size:34px;
 
 font-weight:bold;
 
@@ -595,23 +749,32 @@ margin-bottom:8px;
 
 
 
-/* DUA */
+/* Dua */
 
 .dua{
 
-margin-top:70px;
+margin:80px auto;
 
 padding:35px;
 
-background:rgba(255,255,255,.85);
+max-width:750px;
 
-border-radius:22px;
+background:rgba(255,255,255,.92);
 
-max-width:700px;
+border-radius:25px;
 
-margin-left:auto;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-margin-right:auto;
+}
+
+
+.dua h2{
+
+font-family:'Cinzel',serif;
+
+color:#8b1e2d;
+
+margin-bottom:20px;
 
 }
 
@@ -620,11 +783,13 @@ margin-right:auto;
 
 font-family:'Noto Naskh Arabic',serif;
 
-font-size:32px;
+font-size:30px;
 
-color:#8b1e2d;
+line-height:1.8;
 
 margin-bottom:18px;
+
+color:#7d1626;
 
 }
 
@@ -639,20 +804,29 @@ line-height:1.8;
 
 
 
-/* FOOTER */
+/* Footer */
 
 footer{
 
-margin-top:70px;
-
-padding:35px;
+padding:45px 20px;
 
 background:#7d1626;
 
 color:white;
 
-font-size:18px;
+text-align:center;
 
-letter-spacing:1px;
+}
+
+
+footer h2{
+
+font-family:'Cinzel',serif;
+
+margin-top:10px;
+
+font-size:34px;
+
+letter-spacing:2px;
 
 }
