@@ -8,7 +8,12 @@ const now = new Date().getTime();
 
 const distance = weddingDate - now;
 
+const openBtn = document.getElementById("openBtn");
+const music = document.getElementById("bgMusic");
 
+openBtn.onclick = function(){
+    music.play();
+};
 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
 const hours = Math.floor(
