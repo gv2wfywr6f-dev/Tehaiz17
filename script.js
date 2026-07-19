@@ -1,21 +1,21 @@
-// ==========================
-// ELEMENTS
-// ==========================
+/* ==========================
+ELEMENTS
+========================== */
 
-const openBtn = document.getElementById("openInvitation");
+const openButton = document.getElementById("openInvitation");
 const envelope = document.querySelector(".envelope");
-const music = document.getElementById("bgMusic");
-const invitation = document.getElementById("invitation");
 const envelopeSection = document.getElementById("envelopeSection");
+const invitation = document.getElementById("invitation");
+const seal = document.getElementById("seal");
+const music = document.getElementById("bgMusic");
 
 
-// ==========================
-// OPEN COVER
-// ==========================
+/* ==========================
+OPEN INVITATION
+========================== */
 
-openBtn.addEventListener("click", function () {
+openButton.addEventListener("click", () => {
 
-    // Scroll to envelope
     envelopeSection.scrollIntoView({
         behavior: "smooth"
     });
@@ -23,22 +23,30 @@ openBtn.addEventListener("click", function () {
 });
 
 
-// ==========================
-// OPEN ENVELOPE
-// ==========================
+/* ==========================
+OPEN ENVELOPE
+========================== */
 
-const seal = document.getElementById("seal");
-
-seal.addEventListener("click", function () {
+seal.addEventListener("click", () => {
 
     envelope.classList.add("open");
 
-    setTimeout(function () {
+    if (music) {
+
+        music.currentTime = 0;
+
+        music.play().catch(() => {
+            console.log("Autoplay blocked until user interaction.");
+        });
+
+    }
+
+    setTimeout(() => {
 
         invitation.scrollIntoView({
             behavior: "smooth"
         });
 
-    }, 1500);
+    }, 1800);
 
 });
