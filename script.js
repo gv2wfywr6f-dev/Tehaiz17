@@ -1,83 +1,44 @@
-// Open invitation + Nasheed
+// ==========================
+// ELEMENTS
+// ==========================
 
-const openBtn = document.getElementById("openBtn");
+const openBtn = document.getElementById("openInvitation");
+const envelope = document.querySelector(".envelope");
 const music = document.getElementById("bgMusic");
+const invitation = document.getElementById("invitation");
+const envelopeSection = document.getElementById("envelopeSection");
 
 
-openBtn.addEventListener("click", function(){
+// ==========================
+// OPEN COVER
+// ==========================
 
-document.getElementById("scratchPage").scrollIntoView({
-behavior:"smooth"
-});
+openBtn.addEventListener("click", function () {
 
-
-if(music){
-music.play();
-}
-
-});
-
-
-
-
-// Scratch reveal effect
-
-const scratch = document.getElementById("scratch-layer");
-
-
-scratch.addEventListener("click", function(){
-
-scratch.style.opacity="0";
-scratch.style.transition="1s";
+    // Scroll to envelope
+    envelopeSection.scrollIntoView({
+        behavior: "smooth"
+    });
 
 });
 
 
+// ==========================
+// OPEN ENVELOPE
+// ==========================
 
+const seal = document.getElementById("seal");
 
+seal.addEventListener("click", function () {
 
-// Countdown
+    envelope.classList.add("open");
 
-const weddingDate = new Date("December 4, 2026 19:00:00").getTime();
+    setTimeout(function () {
 
+        invitation.scrollIntoView({
+            behavior: "smooth"
+        });
 
-function countdown(){
+    }, 1500);
 
-const now = new Date().getTime();
-
-const distance = weddingDate - now;
-
-
-const days = Math.floor(distance/(1000*60*60*24));
-
-const hours = Math.floor(
-(distance%(1000*60*60*24))/(1000*60*60)
-);
-
-
-const minutes = Math.floor(
-(distance%(1000*60*60))/(1000*60)
-);
-
-
-const seconds = Math.floor(
-(distance%(1000*60))/1000
-);
-
-
-
-document.getElementById("days").innerHTML = days;
-
-document.getElementById("hours").innerHTML = hours;
-
-document.getElementById("minutes").innerHTML = minutes;
-
-document.getElementById("seconds").innerHTML = seconds;
-
-
-}
-
-
-setInterval(countdown,1000);
-
-countdown();
+});
