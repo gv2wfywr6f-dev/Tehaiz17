@@ -329,4 +329,32 @@ h2{
 font-size:26px;
 }
 <script src="script.js"></script>
+  body{
+scroll-behavior:smooth;
+}
+
+.hero{
+min-height:100vh;
+}
+
+section{
+max-width:900px;
+margin:auto;
+}
+
+.details,
+.verse,
+.countdown,
+.dua,
+.rsvp{
+background:#fffdf8;
+margin:25px auto;
+border-radius:35px;
+box-shadow:0 10px 30px rgba(180,140,70,0.15);
+}
+
+.couple img{
+max-height:450px;
+object-fit:contain;
+}
 }
