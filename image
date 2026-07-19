@@ -4,8 +4,9 @@ Tehaiz17
 ├── style.css
 ├── script.js
 │
-└── images
-    └── islamic-couple.png
-images
- ├── islamic-couple.png
- └── flowers.png
+├── images
+│     ├── islamic-couple.png
+│     └── flowers.png
+│
+└── audio
+      └── nasheed.mp3
