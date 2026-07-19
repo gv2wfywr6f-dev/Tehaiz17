@@ -1,1 +1,150 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f1e7;
+color:#3b3025;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(45,35,20,.55),rgba(45,35,20,.55)),
+url("images/background.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-content{
+color:white;
+padding:30px;
+}
+
+.hero h3{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:55px;
+letter-spacing:2px;
+}
+
+.hero h1 span{
+color:#d4af37;
+}
+
+.hero p{
+max-width:600px;
+margin:25px auto;
+font-size:18px;
+line-height:1.7;
+}
+
+.btn{
+display:inline-block;
+background:#b89035;
+color:white;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+margin-top:15px;
+}
+
+section{
+padding:60px 20px;
+}
+
+
+.verse{
+background:#fffaf2;
+}
+
+.verse h2,
+.details h2,
+.dua h2,
+.countdown h2{
+font-family:'Cinzel',serif;
+color:#9b7626;
+margin-bottom:20px;
+}
+
+
+.couple img{
+width:280px;
+max-width:90%;
+border-radius:20px;
+}
+
+
+.card{
+background:white;
+margin:20px auto;
+padding:25px;
+max-width:350px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+#timer{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+#timer div{
+background:white;
+padding:20px;
+border-radius:15px;
+min-width:80px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+#timer span{
+display:block;
+font-size:30px;
+font-weight:bold;
+color:#b89035;
+}
+
+
+#timer small{
+color:#555;
+}
+
+
+.dua h3{
+font-size:22px;
+line-height:2;
+}
+
+
+footer{
+background:#3b3025;
+color:white;
+padding:30px;
+}
+
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
