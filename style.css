@@ -6,166 +6,201 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#fdf7ee;
-color:#4b3b2a;
+background:#faf3ff;
+color:#4b365f;
 text-align:center;
-overflow-x:hidden;
 }
 
 
-/* Hero */
+/* Opening Page */
+
+#opening{
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(246,232,255,.85),rgba(246,232,255,.95)),
+url("images/flowers.png");
+background-size:cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+
+.envelope{
+width:320px;
+height:210px;
+background:#d9b6e8;
+position:relative;
+border-radius:10px;
+box-shadow:0 20px 40px rgba(100,60,130,.25);
+overflow:hidden;
+}
+
+
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:160px solid transparent;
+border-right:160px solid transparent;
+border-top:110px solid #c995df;
+transform-origin:top;
+transition:1.5s;
+}
+
+
+.letter{
+background:#fff;
+position:absolute;
+width:90%;
+height:150px;
+left:5%;
+top:40px;
+padding:20px;
+border-radius:10px;
+}
+
+
+.letter h3{
+color:#9b6bb5;
+font-size:18px;
+}
+
+
+.letter h1{
+font-family:'Cinzel',serif;
+color:#7b4b94;
+margin:15px 0;
+}
+
+
+#openBtn{
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#a77ac2;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+
+
+#opening.hide .flap{
+transform:rotateX(180deg);
+}
+
+
+#opening.hide{
+animation:fadeOut 1.5s forwards;
+}
+
+
+@keyframes fadeOut{
+
+to{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+
+
+/* Main Page */
+
+
+#invitation{
+background:#faf3ff;
+}
+
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-background:
-linear-gradient(rgba(253,247,238,0.65),rgba(253,247,238,0.85)),
-url("images/background.jpg");
-background-size:cover;
-background-position:center;
-}
-
-
-.hero-content{
-background:rgba(255,255,255,0.55);
-padding:45px 25px;
-border:1px solid #d8b56a;
-border-radius:30px;
-max-width:600px;
-box-shadow:0 15px 40px rgba(150,120,60,0.15);
+padding:70px 25px 40px;
+background:#f5e7ff;
+border-radius:0 0 50px 50px;
 }
 
 
 .hero h3{
-font-size:22px;
-color:#b08a3c;
-margin-bottom:25px;
+color:#a77ac2;
 }
 
 
 .hero h1{
 font-family:'Cinzel',serif;
-font-size:55px;
-color:#8b6828;
-letter-spacing:2px;
+font-size:50px;
+color:#704080;
+margin:20px;
 }
 
 
-.hero h1 span{
-color:#d4af37;
+.hero span{
+color:#b58ac8;
 }
 
 
-.subtitle{
-margin:25px auto;
-line-height:1.8;
-font-size:17px;
-}
-
-
-/* Button */
-
-.btn{
-display:inline-block;
-padding:13px 35px;
-background:#c6a15b;
-color:white;
-border-radius:40px;
-text-decoration:none;
-transition:.4s;
-}
-
-.btn:hover{
-background:#a47d35;
-}
-
-
-/* Sections */
 
 section{
-padding:70px 20px;
-position:relative;
+padding:50px 20px;
 }
 
 
-section:before{
-content:"🌸";
-position:absolute;
-top:10px;
-right:30px;
-font-size:35px;
-opacity:.5;
-}
-
-
-h2{
-font-family:'Cinzel',serif;
-color:#9a742d;
-font-size:32px;
-margin-bottom:25px;
-}
-
-
-/* Quran */
-
-.verse{
-background:#fffaf3;
-padding:50px 25px;
-font-style:italic;
-line-height:2;
-}
 
 
 /* Couple */
 
+
 .couple img{
 width:300px;
 max-width:90%;
-animation:float 4s ease-in-out infinite;
-filter:drop-shadow(0 15px 20px rgba(0,0,0,.15));
+animation:float 4s infinite ease-in-out;
 }
+
 
 
 @keyframes float{
-
-0%{
-transform:translateY(0);
-}
 
 50%{
 transform:translateY(-15px);
 }
 
-100%{
-transform:translateY(0);
 }
 
-}
+
 
 
 /* Cards */
 
+
 .card{
-background:#fffdf8;
-border:1px solid #e2c88d;
-border-radius:25px;
-padding:30px;
+background:white;
 margin:20px auto;
-max-width:380px;
-box-shadow:0 12px 30px rgba(180,140,70,.12);
+padding:25px;
+max-width:360px;
+border-radius:25px;
+border:1px solid #dfc3ee;
+box-shadow:0 10px 30px rgba(120,80,150,.15);
 }
 
 
-.card h3{
-color:#b08a3c;
-margin-bottom:15px;
+
+h2{
+font-family:'Cinzel',serif;
+color:#8b5ba5;
+margin-bottom:25px;
 }
+
 
 
 /* Countdown */
+
 
 #timer{
 display:flex;
@@ -177,77 +212,41 @@ flex-wrap:wrap;
 
 #timer div{
 background:white;
-border:1px solid #dfc58d;
 padding:20px;
 border-radius:20px;
-min-width:80px;
+border:1px solid #ddc2eb;
 }
 
 
 #timer span{
-font-size:30px;
-font-weight:bold;
-color:#b08a3c;
 display:block;
+font-size:30px;
+color:#9b6bb5;
 }
 
-
-/* Dua */
-
-.dua{
-background:#fffaf3;
-}
-
-
-.dua h3{
-font-size:25px;
-line-height:2;
-color:#8b6828;
-}
 
 
 /* RSVP */
 
-.rsvp{
-padding-bottom:80px;
+
+.rsvp a{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#a77ac2;
+color:white;
+border-radius:30px;
+text-decoration:none;
 }
 
 
-/* Footer */
 
 footer{
-background:#8b6828;
+background:#704080;
 color:white;
-padding:35px 20px;
-font-family:'Cinzel',serif;
+padding:30px;
 }
 
-
-/* Soft animation */
-
-.hero-content,
-.card,
-.couple{
-animation:fade 1.5s ease;
-}
-
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-
-/* Mobile */
 
 @media(max-width:600px){
 
@@ -255,106 +254,4 @@ transform:translateY(0);
 font-size:38px;
 }
 
-.hero-content{
-margin:#opening{
-position:fixed;
-inset:0;
-background:#fdf7ee;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-z-index:9999;
-padding:30px;
-background-image:
-radial-gradient(circle at top left,#ead7ad 2px,transparent 3px),
-radial-gradient(circle at bottom right,#ead7ad 2px,transparent 3px);
-background-size:120px 120px;
-}
-
-
-#opening h3{
-font-size:22px;
-color:#b08a3c;
-margin-bottom:25px;
-}
-
-
-#opening h1{
-font-family:'Cinzel',serif;
-font-size:55px;
-color:#8b6828;
-margin-bottom:20px;
-}
-
-
-#opening p{
-font-size:18px;
-color:#6b5740;
-margin-bottom:30px;
-}
-
-
-#openBtn{
-background:#c6a15b;
-color:white;
-border:none;
-padding:15px 35px;
-border-radius:40px;
-font-size:16px;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(180,140,70,.3);
-}
-
-
-#opening.hide{
-animation:openFade 1.5s forwards;
-}
-
-
-@keyframes openFade{
-
-from{
-opacity:1;
-}
-
-to{
-opacity:0;
-visibility:hidden;
-}
-
-}
-
-h2{
-font-size:26px;
-}
-<script src="script.js"></script>
-  body{
-scroll-behavior:smooth;
-}
-
-.hero{
-min-height:100vh;
-}
-
-section{
-max-width:900px;
-margin:auto;
-}
-
-.details,
-.verse,
-.countdown,
-.dua,
-.rsvp{
-background:#fffdf8;
-margin:25px auto;
-border-radius:35px;
-box-shadow:0 10px 30px rgba(180,140,70,0.15);
-}
-
-.couple img{
-max-height:450px;
-object-fit:contain;
-}
 }
